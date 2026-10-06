@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/*
+ * LeadFlow design tokens.
+ * One calm, light palette shared by every screen. Status colors are semantic
+ * (success / warning / danger) and always paired with text or an icon.
+ */
+:root {
+  --background: #f6f7f9;
+  --surface: #ffffff;
+  --surface-muted: #f1f3f6;
+  --foreground: #0f1729;
+  --muted-foreground: #5b6578;
+  --border: #e3e6ec;
+  --ring: #3b5bdb;
+
+  --primary: #2f4fcf;
+  --primary-hover: #2640b0;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eef1fd;
+
+  --success: #0f7a4f;
+  --success-soft: #e7f6ef;
+  --warning: #9a5b00;
+  --warning-soft: #fff4de;
+  --danger: #b4233a;
+  --danger-soft: #fdecee;
+
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 1px 3px rgb(16 24 40 / 0.06);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Visible keyboard focus everywhere, without affecting mouse users. */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
